@@ -2,12 +2,17 @@ plugins {
 	id 'org.springframework.boot' version '2.5.1'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
-	id 'war'
+}
+
+jar {
+	manifest {
+		attributes 'Main-Class': 'net.psv73.ringier.RingierApplication'
+	}
 }
 
 group = 'net.psv73'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
+//sourceCompatibility = '11'
 
 configurations {
 	compileOnly {
@@ -25,7 +30,6 @@ dependencies {
 	implementation group: 'org.xerial', name: 'sqlite-jdbc', version: '3.34.0'
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
-	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
