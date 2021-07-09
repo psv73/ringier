@@ -1,6 +1,6 @@
 Spustenie servisu:
 
-    gradle clean build jar
+    gradlew build
 
     docker-compose up
 
